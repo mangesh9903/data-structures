@@ -48,9 +48,29 @@ public class MyNodeTest {
         linkedList.append(thirdNode);
         linkedList.printNodes();
 
-        boolean result = linkedList.head.equals(firstNode) && linkedList.head.getNext().equals(secondNode) && linkedList.tail.equals(thirdNode);
+        boolean result = linkedList.head.equals(firstNode) && linkedList.head.getNext().equals(secondNode) &&
+                linkedList.tail.equals(thirdNode);
         Assert.assertTrue(result);
     }
+
+    @Test
+    public void givenThreeNumber_whenInsertedToLinkedList_shouldBeAddedInBetween() {
+
+        INode firstNode = new Node(56);
+        INode secondNode = new Node(30);
+        INode thirdNode = new Node(70);
+
+        NewLinkedList linkedList = new NewLinkedList();
+        linkedList.add(firstNode);
+        linkedList.append(thirdNode);
+        linkedList.insert(firstNode, secondNode);
+        linkedList.printNodes();
+        boolean result = linkedList.head.equals(firstNode) && linkedList.head.getNext().equals(secondNode) &&
+                linkedList.tail.equals(thirdNode);
+        Assert.assertTrue(result);
+
+    }
+
 }
 
 

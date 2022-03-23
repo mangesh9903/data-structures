@@ -37,6 +37,12 @@ public class NewLinkedList {
         }
     }
 
+    public void insert(INode node, INode newNode) {
+        INode tempNode = node.getNext();
+        node.setNext(newNode);
+        newNode.setNext(tempNode);
+    }
+
     public void printNodes() {
         StringBuilder nodes = new StringBuilder("My Nodes: ");
         INode tempNode = head;
