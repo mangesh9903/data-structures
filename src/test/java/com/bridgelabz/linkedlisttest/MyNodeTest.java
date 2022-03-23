@@ -21,7 +21,7 @@ public class MyNodeTest {
     }
 
     @Test
-    public void given3Numbers_whenAdded_toLinkedListShouldAdd() {
+    public void givenThreeNumbers_whenAdded_toLinkedListShouldAdd() {
         NewLinkedList linkedList = new NewLinkedList();
         INode<Integer> firstNode = new Node<>(70);
         INode<Integer> secondNode = new Node<>(30);
@@ -37,6 +37,20 @@ public class MyNodeTest {
         Assert.assertTrue(result);
     }
 
+    @Test
+    public void givenThreeNumbers_whenAppend_toLinkedListShouldAdded() {
+        NewLinkedList linkedList = new NewLinkedList();
+        INode<Integer> firstNode = new Node<>(56);
+        INode<Integer> secondNode = new Node<>(30);
+        INode<Integer> thirdNode = new Node<>(76);
+        linkedList.add(firstNode);
+        linkedList.append(secondNode);
+        linkedList.append(thirdNode);
+        linkedList.printNodes();
+
+        boolean result = linkedList.head.equals(firstNode) && linkedList.head.getNext().equals(secondNode) && linkedList.tail.equals(thirdNode);
+        Assert.assertTrue(result);
+    }
 }
 
 

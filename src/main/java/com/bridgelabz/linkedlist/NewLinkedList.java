@@ -1,5 +1,8 @@
 package com.bridgelabz.linkedlist;
 
+import java.util.LinkedList;
+import java.util.List;
+
 public class NewLinkedList {
     public INode head;
     public INode tail;
@@ -19,6 +22,18 @@ public class NewLinkedList {
             INode tempNode = this.head;
             this.head = newNode;
             this.head.setNext(tempNode);
+        }
+    }
+
+    public void append(INode newNode) {
+        if (this.head == null) {
+            this.head = newNode;
+        }
+        if (this.tail == null) {
+            this.tail = newNode;
+        } else {
+            this.tail.setNext(newNode);
+            this.tail = newNode;
         }
     }
 
