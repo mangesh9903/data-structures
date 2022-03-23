@@ -71,6 +71,26 @@ public class MyNodeTest {
 
     }
 
+    @Test
+    public void givenThreeNumber_whenDeleted_fromLinkedList_shouldBecomeTwoNumber() {
+
+        INode firstNode = new Node(56);
+        INode secondNode = new Node(30);
+        INode thirdNode = new Node(70);
+
+        NewLinkedList linkedList = new NewLinkedList();
+        linkedList.add(firstNode);
+        linkedList.append(secondNode);
+        linkedList.append(thirdNode);
+        linkedList.printNodes();
+        linkedList.pop();
+        linkedList.printNodes();
+        boolean result = linkedList.head.equals(secondNode) &&
+                linkedList.head.getNext().equals(thirdNode);
+        Assert.assertTrue(result);
+
+    }
+
 }
 
 
