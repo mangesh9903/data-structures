@@ -22,4 +22,7 @@ public class Stack {
         linkedList.printNodes();
     }
 
+    public INode peak(){
+        return linkedList.head;
+    }
 }
