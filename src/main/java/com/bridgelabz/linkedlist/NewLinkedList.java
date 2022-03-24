@@ -87,6 +87,27 @@ public class NewLinkedList<K> {
         }
     }
 
+    public int size() {
+        INode tempNode = head;
+        int counter = 0;
+        while (tempNode != null) {
+            counter++;
+            tempNode = tempNode.getNext();
+        }
+        return counter;
+    }
+
+    public void searchAndDelete(int number) {
+        INode tempNode = head;
+        while (tempNode.getNext() != null) {
+            if (tempNode.getNext().getKey().equals(number)) {
+                INode temp = tempNode.getNext().getNext();
+                tempNode.setNext(temp);
+            }
+            tempNode = tempNode.getNext();
+        }
+    }
+
     public void printNodes() {
         StringBuffer nodes = new StringBuffer("My Nodes: ");
         INode tempNode = head;
