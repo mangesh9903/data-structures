@@ -1,9 +1,6 @@
 package com.bridgelabz.linkedlist;
 
-import java.util.LinkedList;
-import java.util.List;
-
-public class NewLinkedList {
+public class NewLinkedList<K> {
     public INode head;
     public INode tail;
 
@@ -65,6 +62,17 @@ public class NewLinkedList {
                 head = tail = null;
             }
         }
+    }
+
+    public boolean search(K key) {
+        INode tempNode = head;
+        while (tempNode != null && tempNode.getNext() != null) {
+            if (tempNode.getNext().getKey().equals(key)) {
+                return true;
+            }
+            tempNode = tempNode.getNext();
+        }
+        return false;
     }
 
     public void printNodes() {
