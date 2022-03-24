@@ -36,7 +36,7 @@ public class StackTest {
         stack.push(thirdNode);
         stack.push(newNode);
         stack.printStack();
-        INode result = stack.peak();
+        INode result = stack.peek();
         Assert.assertEquals(newNode, result);
     }
 
