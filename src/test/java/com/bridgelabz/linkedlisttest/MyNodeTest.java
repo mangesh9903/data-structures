@@ -88,7 +88,28 @@ public class MyNodeTest {
         boolean result = linkedList.head.equals(secondNode) &&
                 linkedList.head.getNext().equals(thirdNode);
         Assert.assertTrue(result);
+    }
 
+    @Test
+    public void givenThreeNumber_whenDeletedLastNumber_fromLinkedList_shouldBecomeTwoNumber() {
+
+        INode firstNode = new Node(56);
+        INode secondNode = new Node(30);
+        INode thirdNode = new Node(70);
+
+        NewLinkedList linkedList = new NewLinkedList();
+        linkedList.add(firstNode);
+        linkedList.append(secondNode);
+        linkedList.append(thirdNode);
+
+        linkedList.printNodes();
+        System.out.println("After Removing Last Element");
+        linkedList.removeLast();
+        linkedList.printNodes();
+
+        boolean result = linkedList.head.equals(firstNode) &&
+                linkedList.head.getNext().equals(secondNode);
+        Assert.assertTrue(result);
     }
 
 }

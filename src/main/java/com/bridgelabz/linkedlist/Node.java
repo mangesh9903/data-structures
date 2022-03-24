@@ -1,5 +1,8 @@
 package com.bridgelabz.linkedlist;
 
+import java.util.LinkedList;
+import java.util.List;
+
 public class Node<K> implements INode<K> {
 
     private Node next;
@@ -30,4 +33,5 @@ public class Node<K> implements INode<K> {
     public void setNext(INode next) {
         this.next = (Node<K>) next;
     }
+
 }

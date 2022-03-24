@@ -49,15 +49,35 @@ public class NewLinkedList {
         return tempNode;
     }
 
+    public void removeLast() {
+        if (head == null) {
+            System.out.println("List is empty");
+            return;
+        } else {
+            if (head != tail) {
+                INode current = head;
+                while (current.getNext() != tail) {
+                    current = current.getNext();
+                }
+                tail = current;
+                tail.setNext(null);
+            } else {
+                head = tail = null;
+            }
+        }
+    }
+
     public void printNodes() {
-        StringBuilder nodes = new StringBuilder("My Nodes: ");
+        StringBuffer nodes = new StringBuffer("My Nodes: ");
         INode tempNode = head;
         while (tempNode.getNext() != null) {
             nodes.append(tempNode.getKey());
-            if (!tempNode.equals(tail)) nodes.append("->");
+            if (!tempNode.equals(tail))
+                nodes.append("->");
             tempNode = tempNode.getNext();
         }
         nodes.append(tempNode.getKey());
         System.out.println(nodes);
     }
+
 }
