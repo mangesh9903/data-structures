@@ -1,9 +1,12 @@
 package com.bridgelabz.stack;
 
-public class Stack {
+import com.bridgelabz.linkedlist.NewLinkedList;
 
-    public static void main(String[] args) {
-        System.out.println(" Welcome to Stack Data Structure.");
+public class Stack {
+    private final NewLinkedList linkedList;
+
+    public Stack() {
+        this.linkedList = new NewLinkedList();
     }
+
 }
-f
