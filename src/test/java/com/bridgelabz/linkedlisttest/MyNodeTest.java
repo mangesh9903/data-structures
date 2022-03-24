@@ -112,6 +112,21 @@ public class MyNodeTest {
         Assert.assertTrue(result);
     }
 
+    @Test
+    public void givenThreeNumbers_whenSearchAnyNumber_shouldReturnTrue() {
+        INode firstNode = new Node(56);
+        INode secondNode = new Node(30);
+        INode thirdNode = new Node(70);
+
+        NewLinkedList linkedList = new NewLinkedList();
+        linkedList.add(firstNode);
+        linkedList.append(secondNode);
+        linkedList.append(thirdNode);
+        linkedList.printNodes();
+
+        boolean result = linkedList.search(30);
+        Assert.assertTrue(result);
+    }
 }
 
 
