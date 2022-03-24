@@ -6,3 +6,4 @@ public class Stack {
         System.out.println(" Welcome to Stack Data Structure.");
     }
 }
+f
