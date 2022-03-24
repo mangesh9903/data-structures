@@ -127,6 +127,26 @@ public class MyNodeTest {
         boolean result = linkedList.search(30);
         Assert.assertTrue(result);
     }
+
+    @Test
+    public void givenThreeNumbers_whenSearchAnyNumber_andInsert_inLinkedList() {
+        INode firstNode = new Node(56);
+        INode secondNode = new Node(30);
+        INode thirdNode = new Node(70);
+        INode newNode = new Node(90);
+
+        NewLinkedList linkedList = new NewLinkedList();
+        linkedList.add(firstNode);
+        linkedList.append(secondNode);
+        linkedList.append(thirdNode);
+        linkedList.printNodes();
+        linkedList.searchAndInsert(30, newNode);
+        linkedList.printNodes();
+
+        boolean result = linkedList.head.getNext().equals(secondNode) &&
+                secondNode.getNext().equals(newNode);
+        Assert.assertTrue(result);
+    }
 }
 
 
