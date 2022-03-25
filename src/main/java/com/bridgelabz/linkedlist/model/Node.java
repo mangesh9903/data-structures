@@ -1,7 +1,6 @@
-package com.bridgelabz.linkedlist;
+package com.bridgelabz.linkedlist.model;
 
-import java.util.LinkedList;
-import java.util.List;
+import com.bridgelabz.linkedlist.service.INode;
 
 public class Node<K> implements INode<K> {
 

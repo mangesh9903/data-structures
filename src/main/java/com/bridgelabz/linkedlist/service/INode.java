@@ -1,4 +1,4 @@
-package com.bridgelabz.linkedlist;
+package com.bridgelabz.linkedlist.service;
 
 public interface INode<T> {
     T getKey();

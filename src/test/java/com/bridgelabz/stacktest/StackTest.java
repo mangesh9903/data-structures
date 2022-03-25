@@ -1,8 +1,8 @@
 package com.bridgelabz.stacktest;
 
-import com.bridgelabz.linkedlist.INode;
-import com.bridgelabz.linkedlist.Node;
-import com.bridgelabz.stack.Stack;
+import com.bridgelabz.linkedlist.service.INode;
+import com.bridgelabz.linkedlist.model.Node;
+import com.bridgelabz.stack.model.Stack;
 import org.junit.Assert;
 import org.junit.Test;
 
