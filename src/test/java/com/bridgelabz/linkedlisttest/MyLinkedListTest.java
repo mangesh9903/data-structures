@@ -1,8 +1,8 @@
 package com.bridgelabz.linkedlisttest;
 
-import com.bridgelabz.linkedlist.INode;
-import com.bridgelabz.linkedlist.NewLinkedList;
-import com.bridgelabz.linkedlist.Node;
+import com.bridgelabz.linkedlist.service.INode;
+import com.bridgelabz.linkedlist.serviceimpl.LinkedList;
+import com.bridgelabz.linkedlist.model.Node;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -22,7 +22,7 @@ public class MyLinkedListTest {
 
     @Test
     public void givenThreeNumbers_whenAdded_toLinkedListShouldAdd() {
-        NewLinkedList linkedList = new NewLinkedList();
+        LinkedList linkedList = new LinkedList();
         INode<Integer> firstNode = new Node<>(70);
         INode<Integer> secondNode = new Node<>(30);
         INode<Integer> thirdNode = new Node<>(56);
@@ -39,7 +39,7 @@ public class MyLinkedListTest {
 
     @Test
     public void givenThreeNumbers_whenAppend_toLinkedListShouldAdded() {
-        NewLinkedList linkedList = new NewLinkedList();
+        LinkedList linkedList = new LinkedList();
         INode<Integer> firstNode = new Node<>(56);
         INode<Integer> secondNode = new Node<>(30);
         INode<Integer> thirdNode = new Node<>(76);
@@ -60,7 +60,7 @@ public class MyLinkedListTest {
         INode secondNode = new Node(30);
         INode thirdNode = new Node(70);
 
-        NewLinkedList linkedList = new NewLinkedList();
+        LinkedList linkedList = new LinkedList();
         linkedList.add(firstNode);
         linkedList.append(thirdNode);
         linkedList.insert(firstNode, secondNode);
@@ -78,12 +78,12 @@ public class MyLinkedListTest {
         INode secondNode = new Node(30);
         INode thirdNode = new Node(70);
 
-        NewLinkedList linkedList = new NewLinkedList();
+        LinkedList linkedList = new LinkedList();
         linkedList.add(firstNode);
         linkedList.append(secondNode);
         linkedList.append(thirdNode);
         linkedList.printNodes();
-        linkedList.pop();
+        linkedList.remove();
         linkedList.printNodes();
         boolean result = linkedList.head.equals(secondNode) &&
                 linkedList.head.getNext().equals(thirdNode);
@@ -97,7 +97,7 @@ public class MyLinkedListTest {
         INode secondNode = new Node(30);
         INode thirdNode = new Node(70);
 
-        NewLinkedList linkedList = new NewLinkedList();
+        LinkedList linkedList = new LinkedList();
         linkedList.add(firstNode);
         linkedList.append(secondNode);
         linkedList.append(thirdNode);
@@ -118,7 +118,7 @@ public class MyLinkedListTest {
         INode secondNode = new Node(30);
         INode thirdNode = new Node(70);
 
-        NewLinkedList linkedList = new NewLinkedList();
+        LinkedList linkedList = new LinkedList();
         linkedList.add(firstNode);
         linkedList.append(secondNode);
         linkedList.append(thirdNode);
@@ -135,7 +135,7 @@ public class MyLinkedListTest {
         INode thirdNode = new Node(70);
         INode newNode = new Node(90);
 
-        NewLinkedList linkedList = new NewLinkedList();
+        LinkedList linkedList = new LinkedList();
         linkedList.add(firstNode);
         linkedList.append(secondNode);
         linkedList.append(thirdNode);
@@ -155,7 +155,7 @@ public class MyLinkedListTest {
         INode thirdNode = new Node(70);
         INode newNode = new Node(90);
 
-        NewLinkedList linkedList = new NewLinkedList();
+        LinkedList linkedList = new LinkedList();
         linkedList.add(firstNode);
         linkedList.append(secondNode);
         linkedList.append(thirdNode);

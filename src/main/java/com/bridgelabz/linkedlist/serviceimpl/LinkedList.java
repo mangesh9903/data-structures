@@ -1,10 +1,13 @@
-package com.bridgelabz.linkedlist;
+package com.bridgelabz.linkedlist.serviceimpl;
 
-public class NewLinkedList<K> {
+import com.bridgelabz.linkedlist.service.INode;
+import com.bridgelabz.linkedlist.service.List;
+
+public class LinkedList<K> implements List<K> {
     public INode head;
     public INode tail;
 
-    public NewLinkedList() {
+    public LinkedList() {
         this.head = head;
         this.tail = tail;
     }
@@ -40,7 +43,7 @@ public class NewLinkedList<K> {
         newNode.setNext(tempNode);
     }
 
-    public INode pop() {
+    public INode remove() {
         INode tempNode = this.head;
         this.head = head.getNext();
         return tempNode;
@@ -50,20 +53,19 @@ public class NewLinkedList<K> {
         if (head == null) {
             System.out.println("List is empty");
             return;
-        } else {
-            if (head != tail) {
-                INode current = head;
-                while (current.getNext() != tail) {
-                    current = current.getNext();
-                }
-                tail = current;
-                tail.setNext(null);
-            } else {
-                head = tail = null;
+        } else if (head != tail) {
+            INode tempNode = head;
+            while (tempNode.getNext() != tail) {
+                tempNode = tempNode.getNext();
             }
+            tail = tempNode;
+            tail.setNext(null);
+        } else {
+            head = tail = null;
         }
     }
 
+    @Override
     public boolean search(K key) {
         INode tempNode = head;
         while (tempNode != null && tempNode.getNext() != null) {

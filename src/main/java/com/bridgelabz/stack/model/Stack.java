@@ -1,13 +1,13 @@
-package com.bridgelabz.stack;
+package com.bridgelabz.stack.model;
 
-import com.bridgelabz.linkedlist.INode;
-import com.bridgelabz.linkedlist.NewLinkedList;
+import com.bridgelabz.linkedlist.service.INode;
+import com.bridgelabz.linkedlist.serviceimpl.LinkedList;
 
 public class Stack {
-    private final NewLinkedList linkedList;
+    private final LinkedList linkedList;
 
     public Stack() {
-        this.linkedList = new NewLinkedList();
+        this.linkedList = new LinkedList();
     }
 
     public void push(INode node) {
@@ -15,7 +15,7 @@ public class Stack {
     }
 
     public INode pop() {
-        return linkedList.pop();
+        return linkedList.remove();
     }
 
     public void printStack() {
