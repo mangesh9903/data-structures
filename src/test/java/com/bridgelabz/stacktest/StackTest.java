@@ -2,7 +2,7 @@ package com.bridgelabz.stacktest;
 
 import com.bridgelabz.linkedlist.service.INode;
 import com.bridgelabz.linkedlist.model.Node;
-import com.bridgelabz.stack.model.Stack;
+import com.bridgelabz.stack.serviceimpl.Stack;
 import org.junit.Assert;
 import org.junit.Test;
 
