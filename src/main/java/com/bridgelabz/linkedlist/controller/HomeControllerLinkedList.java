@@ -81,7 +81,7 @@ public class HomeControllerLinkedList {
                     newLinkedList.printNodes();
                     System.out.println("Enter New Node");
                     INode newNode = new Node(scanner.nextInt());
-                    newLinkedList.insert(secondNode, newNode);
+                    newLinkedList.insert(firstNode, newNode);
                     System.out.println("--------- Linked List ------------");
                     newLinkedList.printNodes();
                     System.out.println("----------------------------------");
